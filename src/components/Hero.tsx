@@ -49,7 +49,7 @@ function Portrait({ ready, sx, sy, ringRotate }: {
 
   return (
     <motion.div
-      className="relative aspect-[2/3] h-[min(30svh,300px)] [perspective:1200px] [@media(max-height:700px)]:h-[24svh] md:h-[min(70vh,680px)]"
+      className="relative aspect-[2/3] h-[min(30svh,300px)] [perspective:1200px] max-md:[@media(max-height:700px)]:h-[24svh] md:h-[min(70vh,680px)]"
       initial={{ opacity: 0, y: 40 }}
       animate={ready ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1.2, ease, delay: 0.25 }}
