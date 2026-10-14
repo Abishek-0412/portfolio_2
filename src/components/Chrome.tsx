@@ -8,10 +8,10 @@ export function Preloader({ onDone }: { onDone: () => void }) {
 
   useEffect(() => {
     const controls = animate(0, 100, {
-      duration: 1.8,
-      ease: [0.65, 0, 0.35, 1],
+      duration: 1.1,
+      ease: [0.4, 0, 0.6, 1],
       onUpdate: (v) => setCount(Math.round(v)),
-      onComplete: () => setTimeout(onDone, 250),
+      onComplete: onDone,
     });
     return () => controls.stop();
   }, [onDone]);
@@ -21,10 +21,10 @@ export function Preloader({ onDone }: { onDone: () => void }) {
       className="hero-bg fixed inset-0 z-[100] flex flex-col justify-between p-[5vw]"
       exit={{ clipPath: "inset(0 0 100% 0)" }}
       initial={{ clipPath: "inset(0 0 0% 0)" }}
-      transition={{ duration: 1, ease }}
+      transition={{ duration: 0.7, ease }}
     >
       <div className="overflow-hidden text-lg tracking-wide">
-        <motion.p initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.8, ease }}>
+        <motion.p initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, ease }}>
           {profile.firstName}
           <span className="opacity-60">{profile.lastName}</span> — Portfolio ©{new Date().getFullYear()}
         </motion.p>
@@ -94,7 +94,7 @@ export function Nav({ ready }: { ready: boolean }) {
         }`}
         initial={{ y: -80, opacity: 0 }}
         animate={ready ? { y: 0, opacity: 1 } : {}}
-        transition={{ duration: 1, ease, delay: 0.6 }}
+        transition={{ duration: 0.8, ease, delay: 0.3 }}
       >
         <div className={`${container} flex items-center justify-between`}>
         <a href="#top" className="text-2xl tracking-tight md:text-[1.7rem]" data-cursor="hover">

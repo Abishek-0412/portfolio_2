@@ -167,7 +167,7 @@ export function Experience() {
           </AnimatePresence>
 
           <div className="mt-16">
-            <p className="mb-4 text-xs tracking-[0.22em] text-muted uppercase">Education & Certification</p>
+            <p className="mb-4 text-xs tracking-[0.22em] text-muted uppercase">Education</p>
             <ul className="border-t border-line">
               {milestones.map((m, i) => (
                 <motion.li

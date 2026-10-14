@@ -35,12 +35,11 @@ export const projects = [
     tagline: "Multi-Site Wine E-commerce & POS",
     kind: "E-commerce · Real-time",
     accent: "#f0640d",
-    file: "inventory.sync.ts",
     tags: ["React", "Node.js", "PostgreSQL", "WebSockets"],
     points: [
       "Online storefront + offline POS with real-time inventory sync across channels",
-      "Cart-hold reservations to prevent overselling under concurrent load",
-      "Multiple payment providers, wallets, RBAC and event-driven order updates",
+      "End-to-end booking module — experience creation, time-slot management and ticket lifecycle",
+      "Cart-hold reservations, multiple payment providers & wallets, RBAC and event-driven order updates",
     ],
   },
   {
@@ -48,12 +47,11 @@ export const projects = [
     tagline: "Referral, Rewards & B2B Platform",
     kind: "B2B · Integrations",
     accent: "#e8a33d",
-    file: "rewards.pipeline.ts",
     tags: ["AngularJS", "MSSQL", "REST APIs"],
     points: [
       "QR-based referrals and loyalty campaigns with automated gift-card fulfillment (SVS, Tango)",
       "FTP batch pipelines with validation and reconciliation of failed transactions",
-      "Wufoo + Zapier integrations and a customer rewards dashboard",
+      "B2B partner onboarding, Wufoo + Zapier integrations and a customer rewards dashboard",
     ],
   },
   {
@@ -61,12 +59,11 @@ export const projects = [
     tagline: "Matrimony Platform — Web & Mobile",
     kind: "Cross-platform · GraphQL",
     accent: "#e2557a",
-    file: "schema.graphql",
-    tags: ["React", "GraphQL", "PostgreSQL", "Flutter"],
+    tags: ["React", "Node.js", "GraphQL", "PostgreSQL", "Flutter"],
     points: [
       "Led delivery of the full platform in 1 month with a small team",
       "Scalable GraphQL APIs plus Android & iOS apps in Flutter",
-      "Encrypted chat, privacy controls and intelligent image validation",
+      "Secure authentication, encrypted chat, privacy controls and intelligent image validation",
     ],
   },
   {
@@ -74,7 +71,6 @@ export const projects = [
     tagline: "AI Agent Platform",
     kind: "AI · LLM Agents",
     accent: "#9b7bff",
-    file: "agent.graph.py",
     tags: ["Python", "LLMs", "LangChain", "LangGraph"],
     points: [
       "Agent system that automates product content and development workflows",
@@ -87,7 +83,6 @@ export const projects = [
     tagline: "AI Medical Imaging System",
     kind: "ML · Computer Vision",
     accent: "#3fb8a8",
-    file: "train.py",
     tags: ["Python", "PyTorch", "Computer Vision"],
     points: [
       "Models that detect retina-related conditions from medical imaging",
@@ -111,6 +106,7 @@ export const experience = {
         "Engineered concurrency control to prevent duplicate transactions in high-traffic flows",
         "Optimized queries and indexing, improving data retrieval efficiency by up to 40%",
         "Hardened Node.js + PostgreSQL services against SQL injection and bot attacks",
+        "Integrated Google Analytics (gtag.js) to track user behavior and drive product decisions",
       ],
     },
     {
@@ -120,7 +116,9 @@ export const experience = {
         "Centralized logging, monitoring and alerting with Datadog",
         "Controlled rollouts using Flipt feature flags",
         "Caching, API optimization and efficient data-access patterns to cut latency",
-        "Resilient systems with retries, fault tolerance and real-time health dashboards",
+        "Real-time dashboards for application performance, errors and system health",
+        "Resilient systems with retries, error handling and fault tolerance",
+        "Edge protection with WAF, rate limiting and load balancing",
       ],
     },
     {
@@ -137,7 +135,6 @@ export const experience = {
 };
 
 export const milestones = [
-  { title: "AWS Certified Solutions Architect", meta: "Certification", period: "In Progress" },
   { title: "M.Sc B.Ed in Computer Science", meta: "Government College of Arts and Science, Coimbatore", period: "2022" },
 ];
 
@@ -185,11 +182,11 @@ export const reasons = [
 ];
 
 export const skills = [
-  { group: "Frontend", items: ["React.js", "TypeScript", "Redux", "Zustand", "Tailwind CSS"] },
-  { group: "Backend", items: ["Node.js", "Express.js", "Go (Golang)", "GraphQL", "Python"] },
+  { group: "Frontend", items: ["React.js", "TypeScript", "Redux", "Zustand", "Tailwind CSS", "Playwright"] },
+  { group: "Backend & Data", items: ["Node.js", "Express.js", "Go (Golang)", "GraphQL", "Python", "PostgreSQL", "Query Tuning & Indexing"] },
   { group: "AI & Agents", items: ["LangGraph", "LangChain", "LLM Pipelines", "PyTorch", "AI Tooling"] },
-  { group: "Cloud & DevOps", items: ["AWS Lambda / EC2 / RDS", "SQS & Step Functions", "Terraform", "CI/CD", "PostgreSQL"] },
-  { group: "Observability & Security", items: ["OpenTelemetry", "Datadog", "Flipt", "WAF & Rate Limiting", "Bot Mitigation"] },
+  { group: "Cloud & DevOps", items: ["AWS Lambda / EC2 / RDS", "SQS & Step Functions", "Elastic Beanstalk", "Terraform", "CI/CD"] },
+  { group: "Observability & Security", items: ["OpenTelemetry", "Datadog", "Flipt", "WAF & Rate Limiting", "Load Balancing", "Bot Mitigation"] },
 ];
 
 export const tools = [
