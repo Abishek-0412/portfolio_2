@@ -92,6 +92,50 @@ export const projects = [
   },
 ];
 
+/** Independent projects, separate from company delivery. */
+export const ownProjects = [
+  {
+    name: "AV Chat",
+    wide: false,
+    tagline: "Private chat that keeps nothing on disk",
+    status: "In development",
+    platform: "Android",
+    accent: "#1aa37a",
+    image: "/image/av-chat.png",
+    repo: "https://github.com/Abishek-0412/AV_chat",
+    description:
+      "An Android messenger with end-to-end encryption. Messages stay in memory and clear when the app closes. No database and no cloud copy. One-to-one and group calls run over WebRTC through a Dart relay that stores nothing.",
+    highlights: [
+      "Messages live in RAM and clear when the app closes",
+      "Encryption keys stay on the device",
+      "AV-ID identity, with no phone number required",
+      "Screenshots blocked with FLAG_SECURE",
+      "Stateless relay: memory only, nothing written to disk",
+    ],
+    tags: ["Flutter", "Dart", "WebRTC", "E2E encryption", "MVVM"],
+  },
+  {
+    name: "VockyCall",
+    wide: true,
+    tagline: "Voice calls over WiFi and Bluetooth, offline",
+    status: "Unreleased",
+    platform: "Android",
+    accent: "#4aa3e8",
+    image: "/image/vocky.png",
+    repo: "https://github.com/Abishek-0412/vocky_call",
+    description:
+      "Local voice calls between Android phones over WiFi or Bluetooth. No internet, SIM, or server. WiFi calls use WebRTC. Bluetooth calls use a native Kotlin RFCOMM service, with group calls and push-to-talk included.",
+    highlights: [
+      "WiFi and Bluetooth at the same time, with no internet",
+      "Group calls over WiFi with WebRTC",
+      "Bluetooth calls without pairing, via RFCOMM",
+      "Device discovery with UDP multicast and subnet broadcast",
+      "Push-to-talk, mute, and speaker or earpiece",
+    ],
+    tags: ["Flutter", "Dart", "WebRTC", "Kotlin", "Riverpod", "Bluetooth"],
+  },
+];
+
 export const experience = {
   role: "Full Stack Developer / Developer Lead",
   company: "Brightspot Technology Solutions",

@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring, type Variants } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion, useSpring, type Variants } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 
 export const ease = [0.22, 1, 0.36, 1] as const;
@@ -20,6 +20,7 @@ export function RevealText({
   /** When set, plays on this flag instead of on scroll-into-view. */
   animate?: boolean;
 }) {
+  const reduce = useReducedMotion();
   const container: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: stagger, delayChildren: delay } },
@@ -28,13 +29,14 @@ export function RevealText({
     hidden: { y: "110%", rotate: 4 },
     show: { y: "0%", rotate: 0, transition: { duration: 0.9, ease } },
   };
-  const trigger =
-    animate === undefined
-      ? { whileInView: "show", viewport: { once, amount: 0.4 } }
-      : { animate: animate ? "show" : "hidden" };
+  const trigger = reduce
+    ? { animate: "show" as const }
+    : animate === undefined
+      ? { whileInView: "show" as const, viewport: { once, amount: 0.35 } }
+      : { animate: animate ? ("show" as const) : ("hidden" as const) };
 
   return (
-    <motion.span className={className} variants={container} initial="hidden" {...trigger} aria-label={text}>
+    <motion.span className={className} variants={container} initial={reduce ? "show" : "hidden"} {...trigger} aria-label={text}>
       {text.split(" ").map((w, i) => (
         <span key={i} aria-hidden className="inline-block overflow-hidden pb-[0.08em] align-bottom">
           <motion.span className="inline-block origin-bottom-left" variants={word}>
@@ -56,13 +58,15 @@ export function FadeUp({
   className?: string;
   delay?: number;
 }) {
+  const reduce = useReducedMotion();
+  if (reduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.9, ease, delay }}
+      viewport={{ once: true, amount: 0.28 }}
+      transition={{ duration: 0.8, ease, delay }}
     >
       {children}
     </motion.div>
@@ -116,7 +120,7 @@ export function PillButton({
         href={href}
         download={download}
         data-cursor="hover"
-        className={`group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-7 py-4 text-base font-medium transition-colors ${base}`}
+        className={`group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-7 py-4 text-base font-medium transition-[transform,color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98] ${base}`}
       >
         <span className="absolute inset-0 origin-bottom scale-y-0 rounded-full bg-ember transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-y-100" />
         <span className="relative h-2 w-2 rounded-full bg-current transition-transform duration-500 group-hover:scale-150" />

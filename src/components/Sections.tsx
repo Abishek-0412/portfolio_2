@@ -88,18 +88,14 @@ export function Marquee() {
   const row = [...tools, ...tools];
   return (
     <section className="overflow-hidden border-y border-line py-8" aria-label="Tools and technologies">
-      <motion.div
-        className="flex w-max gap-10 text-4xl tracking-tight whitespace-nowrap md:text-6xl"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-      >
+      <div className="marquee-track flex w-max gap-10 text-4xl tracking-tight whitespace-nowrap md:text-6xl">
         {row.map((t, i) => (
           <span key={i} className="flex items-center gap-10">
             <span className={i % 2 ? "text-outline" : "text-cream"}>{t}</span>
             <span className="text-2xl text-ember md:text-3xl">✦</span>
           </span>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
@@ -111,7 +107,7 @@ export function Experience() {
 
   return (
     <section id="experience" className={`${container} py-24 md:py-36`}>
-      <SectionHeader index="03" label="Experience" title="Leading Teams," accent="Shipping Systems." />
+      <SectionHeader index="04" label="Experience" title="Leading Teams," accent="Shipping Systems." />
 
       <div className="grid gap-10 md:grid-cols-12 md:gap-8">
         <FadeUp className="md:col-span-3">
@@ -270,7 +266,7 @@ export function AiDev() {
   return (
     <section id="ai" className={`${container} py-24 md:py-36`}>
       <SectionHeader
-        index="04"
+        index="05"
         label="AI-Integrated Dev"
         title="Agents in the Loop,"
         accent="Not Just in the Pitch."
@@ -333,7 +329,7 @@ export function HowIBuild() {
   return (
     <section id="process" className={`${container} py-24 md:py-36`}>
       <SectionHeader
-        index="05"
+        index="06"
         label="How I Build"
         title="Architecture That"
         accent="Holds Under Load."
@@ -399,7 +395,7 @@ export function Stack() {
     <section id="stack" className="rounded-[2.5rem] bg-cream text-ink">
       <div className={`${container} py-24 md:py-36`}>
         <SectionHeader
-          index="06"
+          index="07"
           label="Stack"
           title="Tools of the Trade"
           accent="Across the Stack."
@@ -432,7 +428,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className={`${container} py-24 md:py-36`}>
-      <SectionHeader index="07" label="FAQ" title="Frequently Asked" accent="Questions" />
+      <SectionHeader index="08" label="FAQ" title="Frequently Asked" accent="Questions" />
       <div className="md:grid md:grid-cols-12 md:gap-8">
         <ul className="border-t border-line md:col-span-9 md:col-start-4">
           {faqs.map((f, i) => {
@@ -487,7 +483,7 @@ export function Contact() {
       <div className={`${container} relative z-10 pt-24 md:pt-36`}>
         <div className="grid gap-6 md:grid-cols-12 md:gap-8">
           <FadeUp className="flex items-center gap-3 text-xs tracking-[0.22em] text-cream/75 uppercase md:col-span-3 md:items-start md:pt-4">
-            <span>(08)</span> Contact
+            <span>(09)</span> Contact
           </FadeUp>
           <div className="md:col-span-9">
             <h2 className="mb-10 text-[2.8rem] leading-[1] tracking-tight md:text-[5.6vw] xl:text-[5.5rem]">
