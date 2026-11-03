@@ -128,14 +128,12 @@ export function Nav({ ready }: { ready: boolean }) {
     <>
       <motion.div className="fixed top-0 left-0 z-50 h-[3px] w-full origin-left bg-ember" style={{ scaleX }} />
       <motion.header
-        className={`fixed inset-x-0 top-0 z-40 transition-[background-color,padding,backdrop-filter] duration-500 ${
-          solid || open ? "border-b border-line bg-ink/75 py-3 backdrop-blur-xl" : "py-5 md:py-7"
-        }`}
+        className="fixed top-3 right-3 left-3 z-40 md:top-5 md:right-6 md:left-6"
         initial={{ y: -80, opacity: 0 }}
         animate={ready ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.8, ease, delay: 0.3 }}
       >
-        <div className={`${container} flex items-center justify-between gap-4`}>
+        <div className={`${container} flex items-center justify-between gap-4 rounded-full border border-white/10 px-4 py-2 pl-5 shadow-[0_12px_40px_rgba(16,14,12,0.28)] backdrop-blur-xl transition-colors duration-500 md:px-6 ${solid || open ? "bg-ink/85" : "bg-ink/55"}`}>
         <a href="#top" className="text-2xl tracking-tight md:text-[1.7rem]" data-cursor="hover" onClick={() => setOpen(false)}>
           {profile.firstName}
           <span className="text-cream/50">.{profile.lastName}</span>

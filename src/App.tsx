@@ -45,7 +45,7 @@ export default function App() {
       <div id="top" className="absolute top-0" />
       <Hero ready={!loading} />
       {/* Content slides up over the sticky hero */}
-      <main className="relative z-10 -mt-px rounded-t-[2.5rem] bg-ink shadow-[0_-32px_80px_rgba(18,10,6,0.55)] ring-1 ring-white/10">
+      <main className="relative z-10 -mt-px rounded-t-[2.5rem] bg-ink shadow-[0_-24px_70px_rgba(16,14,12,0.45)] ring-1 ring-white/10">
         <About />
         <Work />
         <Own />

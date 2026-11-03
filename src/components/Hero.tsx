@@ -71,8 +71,7 @@ function Portrait({ ready, sx, sy, ringRotate }: {
             transition={{ duration: 1.6, ease, delay: 0.15 }}
           />
           {/* warm grade so the photo sits inside the gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#f0640d]/25 via-transparent to-[#2a1108]/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1c0d07]/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/5 to-transparent" />
         </motion.div>
 
         {/* floating glass chips */}
@@ -83,7 +82,7 @@ function Portrait({ ready, sx, sy, ringRotate }: {
           animate={ready ? { opacity: 1, x: 0, y: [0, -6, 0] } : {}}
           transition={{ opacity: { delay: 0.7 }, x: { delay: 0.7, duration: 0.8, ease }, y: { duration: 4, repeat: Infinity, ease: "easeInOut" } }}
         >
-          <span className="h-2 w-2 rounded-full bg-[#7dff9b]" /> Open to opportunities
+          <span className="h-2 w-2 rounded-full bg-ember" /> Open to opportunities
         </motion.div>
         <motion.div
           className="absolute -right-5 top-[38%] hidden rounded-2xl border border-cream/20 bg-ink/40 px-4 py-3 text-right backdrop-blur-md md:block"
@@ -104,7 +103,7 @@ function Portrait({ ready, sx, sy, ringRotate }: {
           animate={ready ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, ease, delay: 0.5 }}
         >
-          <div className="absolute inset-[22%] grid place-items-center rounded-full bg-gradient-to-br from-[#ff9a52] via-[#d8470a] to-[#4a0f04] text-sm tracking-tight text-cream shadow-[0_0_40px_rgba(240,100,13,0.5)] md:text-xl">
+          <div className="absolute inset-[22%] grid place-items-center rounded-full bg-ink-2 text-sm tracking-tight text-cream ring-1 ring-ember/50 shadow-[0_16px_40px_rgba(16,14,12,0.45)] md:text-xl">
             AN
           </div>
           <motion.svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full" style={{ rotate: ringRotate }}>
@@ -153,12 +152,12 @@ export function Hero({ ready }: { ready: boolean }) {
     >
       {/* pointer glow */}
       <motion.div
-        className="pointer-events-none absolute h-[50vw] w-[50vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff8a3d] opacity-40 blur-[120px]"
+        className="pointer-events-none absolute h-[34vw] w-[34vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ember opacity-20 blur-[120px]"
         style={{ left: glowX, top: glowY }}
       />
 
       <motion.div
-        className={`${container} relative z-10 grid h-full grid-cols-1 content-center gap-6 pt-20 pb-24 md:pt-0 md:grid-cols-12 md:content-center md:items-center md:gap-8 md:pb-0`}
+        className={`${container} relative z-10 grid h-full grid-cols-1 content-center gap-6 pt-28 pb-24 md:pt-16 md:grid-cols-12 md:content-center md:items-center md:gap-8 md:pb-0`}
         style={{ y: textY }}
       >
         <div className="flex justify-center md:order-2 md:col-span-5 md:justify-end">
@@ -172,8 +171,8 @@ export function Hero({ ready }: { ready: boolean }) {
           transition={{ delay: 0.1, duration: 0.6 }}
         >
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7dff9b] opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#7dff9b]" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ember opacity-70" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-ember" />
           </span>
           Full Stack · AI-Integrated Development
         </motion.p>

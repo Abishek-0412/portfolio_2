@@ -3,14 +3,14 @@
 
 @theme {
   --font-sans: "Host Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --color-ink: #120a06;
-  --color-ink-2: #1c110b;
-  --color-cream: #f6eee6;
-  --color-muted: #b9a89c;
-  --color-ember: #f0640d;
-  --color-flame: #d8470a;
-  --color-blood: #b01205;
-  --color-line: rgb(246 238 230 / 0.12);
+  --color-ink: #100e0c;
+  --color-ink-2: #1a1714;
+  --color-cream: #f3efe8;
+  --color-muted: #a3988e;
+  --color-ember: #e06a2f;
+  --color-flame: #c4541c;
+  --color-blood: #9a3412;
+  --color-line: rgb(243 239 232 / 0.12);
 }
 
 html {
@@ -31,12 +31,11 @@ body {
 }
 
 .hero-bg {
-  background-color: #180d08;
+  background-color: #100e0c;
   background-image:
-    radial-gradient(65% 55% at 92% 6%, #f0640d 0%, rgba(240, 100, 13, 0) 65%),
-    radial-gradient(60% 55% at 4% 82%, #ec690f 0%, rgba(236, 105, 15, 0) 65%),
-    radial-gradient(75% 80% at 48% 42%, #b01205 0%, rgba(176, 18, 5, 0) 70%),
-    linear-gradient(180deg, #d8470a 0%, #c0300a 28%, #b01205 46%, #7a1c08 68%, #2a1108 88%, #180d08 100%);
+    radial-gradient(36% 42% at 82% 12%, rgba(224, 106, 47, 0.42) 0%, rgba(224, 106, 47, 0) 68%),
+    radial-gradient(42% 36% at 6% 92%, rgba(196, 84, 28, 0.18) 0%, rgba(196, 84, 28, 0) 70%),
+    linear-gradient(180deg, #1c1916 0%, #141210 48%, #100e0c 100%);
 }
 
 /* Film grain overlay */
@@ -61,7 +60,7 @@ body {
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgb(246 238 230 / 0.35);
+  -webkit-text-stroke: 1px rgb(243 239 232 / 0.32);
 }
 
 .page-grain {

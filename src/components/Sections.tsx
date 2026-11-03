@@ -57,7 +57,7 @@ export function About() {
             <p className="text-cream">{profile.title}</p>
             <p className="text-sm text-muted">Brightspot Technology Solutions</p>
             <div className="mt-4 flex items-center gap-2 text-sm text-cream/80">
-              <span className="h-2 w-2 rounded-full bg-[#7dff9b]" /> Open to opportunities
+              <span className="h-2 w-2 rounded-full bg-ember" /> Open to opportunities
             </div>
           </div>
         </FadeUp>
@@ -234,7 +234,7 @@ function AgentTerminal() {
       </div>
       <div className="relative min-h-[320px] space-y-2.5 p-5 font-mono text-[13px] leading-relaxed md:p-6 md:text-sm">
         <p className="text-cream">
-          <span className="text-[#7dff9b]">➜</span> <span className="text-[#9b7bff]">~</span> {cmd.slice(0, typed)}
+          <span className="text-ember">➜</span> <span className="text-cream/50">~</span> {cmd.slice(0, typed)}
           {shown === 0 && <span className="ml-0.5 inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-cream/80" />}
         </p>
         {agentRun.slice(1, shown + 1).map((l, idx) => {
@@ -308,7 +308,7 @@ function Connector({ delay }: { delay: number }) {
       {/* vertical (mobile) */}
       <div className="relative h-10 w-px bg-cream/20 md:hidden">
         <motion.span
-          className="absolute -left-[3px] h-[7px] w-[7px] rounded-full bg-ember shadow-[0_0_12px_#f0640d]"
+            className="absolute -left-[3px] h-[7px] w-[7px] rounded-full bg-ember shadow-[0_0_12px_#e06a2f]"
           animate={{ top: ["0%", "100%"], opacity: [0, 1, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, delay, ease: "easeInOut" }}
         />
@@ -316,7 +316,7 @@ function Connector({ delay }: { delay: number }) {
       {/* horizontal (desktop) */}
       <div className="relative hidden h-px w-full bg-cream/20 md:block">
         <motion.span
-          className="absolute -top-[3px] h-[7px] w-[7px] rounded-full bg-ember shadow-[0_0_12px_#f0640d]"
+            className="absolute -top-[3px] h-[7px] w-[7px] rounded-full bg-ember shadow-[0_0_12px_#e06a2f]"
           animate={{ left: ["0%", "100%"], opacity: [0, 1, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, delay, ease: "easeInOut" }}
         />
@@ -443,7 +443,7 @@ export function Faq() {
                   {f.q}
                   <motion.span
                     className="grid h-9 w-9 shrink-0 place-items-center rounded-full"
-                    animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#f0640d" : "rgba(246,238,230,0.1)" }}
+                    animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#e06a2f" : "rgba(243,239,232,0.1)" }}
                     transition={{ duration: 0.4, ease }}
                   >
                     +
